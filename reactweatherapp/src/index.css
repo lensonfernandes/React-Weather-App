@@ -5,6 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #d5d4d4;
   background-image: url('./weatherBackground.jpg');
+  opacity: 0.8;
 }
 
 code {

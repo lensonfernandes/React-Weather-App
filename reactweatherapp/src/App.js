@@ -4,9 +4,11 @@ import CurrentWeather from "./components/current-weather/current-weather";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./api";
 import { useState } from "react";
 import Forecast from "./components/forecast/forecast";
+import { Typography } from 'antd';
 
 
 function App() {
+  const { Title } = Typography;
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
@@ -43,6 +45,8 @@ function App() {
 
   return (
     <div className="container">
+      {/* <h1>Weather</h1> */}
+      <Title >Weather Lens</Title>
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}
